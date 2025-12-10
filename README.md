@@ -1,50 +1,49 @@
-# Welcome to your Expo app 👋
+# 📱 QRQUOTE
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+O **QRQUOTE** é um aplicativo desenvolvido para auxiliar pessoas com deficiência visual. Ele permite a leitura instantânea de QR Codes, convertendo informações visuais em feedback sonoro e háptico, promovendo maior autonomia em diversos ambientes.
 
-## Get started
+---
 
-1. Install dependencies
+## 🎯 Objetivo do Projeto
 
-   ```bash
-   npm install
-   ```
+O principal intuito do QRQUOTE é derrubar barreiras de informação:
+- **Acessibilidade Imediata:** Transformar o conteúdo estático de códigos QR em fala fluida e compreensível.
+- **Interação Intuitiva:** Detectar links automaticamente e oferecer ações rápidas (abrir navegador, copiar), sem menus complexos.
+- **Personalização:** Oferecer controles granulares de acessibilidade, como ajuste de velocidade da fala e feedback tátil.
+- **Inclusão:** Facilitar a disseminação de informações úteis (horários, contatos, descrições de produtos) de forma acessível.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## ✨ Funcionalidades Principais
 
-In the output, you'll find options to open the app in a
+O aplicativo foi desenhado com foco total na Usabilidade (UX) para deficientes visuais:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+* 👁️ **Scanner Inteligente:** Captura e processamento instantâneo de dados utilizando `expo-camera`.
+* 🗣️ **Narrativa TTS (Text-to-Speech):** Leitura em voz alta do conteúdo via `expo-speech`, com suporte a seleção de vozes do sistema.
+* ⏩ **Controle Dinâmico de Velocidade:** Sistema de ciclo rápido (Normal → Rápida → Muito Rápida) com feedback sonoro e vibração para confirmação.
+* 🔗 **Gerenciamento de Links:** Identificação automática de URLs no QR Code com atalhos de navegação.
+* 🔦 **Auxílio em Baixa Luz:** Controle de lanterna integrado para garantir a leitura em ambientes escuros.
+* 👋 **Shake-to-Cancel:** Uso do acelerômetro (`expo-sensors`) para interromper a leitura imediatamente ao detectar um movimento brusco (agitar o celular).
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 🛠️ Tecnologias Utilizadas
 
-When you're ready, run:
+Este projeto foi construído com foco em performance e compatibilidade multiplataforma:
 
-```bash
-npm run reset-project
-```
+- **Framework:** [Expo](https://expo.dev/) + [React Native](https://reactnative.dev/)
+- **Câmera:** `expo-camera`
+- **Síntese de Voz:** `expo-speech`
+- **Sensores:** `expo-sensors` (Acelerômetro)
+- **Feedback Tátil:** `expo-haptics`
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 📂 Estrutura do Código
 
-To learn more about developing your project with Expo, look at the following resources:
+A lógica principal da aplicação está centralizada para facilitar a manutenção:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **Tela Principal:** `app/(tabs)/index.tsx`
+  - Contém a lógica do scanner.
+  - Gerenciamento do ciclo de vida da leitura de voz.
+  - Implementação dos controles de acessibilidade.
