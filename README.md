@@ -14,6 +14,12 @@ O principal intuito do QRQUOTE é derrubar barreiras de informação:
 
 ---
 
+## 📺 Demonstração
+
+![GIF do App Funcionando](demo.gif)
+
+---
+
 ## ✨ Funcionalidades Principais
 
 O aplicativo foi desenhado com foco total na Usabilidade (UX) para deficientes visuais:
@@ -24,6 +30,34 @@ O aplicativo foi desenhado com foco total na Usabilidade (UX) para deficientes v
 * 🔗 **Gerenciamento de Links:** Identificação automática de URLs no QR Code com atalhos de navegação.
 * 🔦 **Auxílio em Baixa Luz:** Controle de lanterna integrado para garantir a leitura em ambientes escuros.
 * 👋 **Shake-to-Cancel:** Uso do acelerômetro (`expo-sensors`) para interromper a leitura imediatamente ao detectar um movimento brusco (agitar o celular).
+
+---
+
+## 🚀 Instalação
+
+Para rodar este projeto localmente, vai precisar de ter o [Node.js] instalado no seu computador e a aplicação **Expo Go** no seu celular.
+
+### Passo a Passo
+
+1.  **Clone o repositório**
+    ```bash
+    git clone git@github.com:kxtukI/qrquote.git
+    cd qrquote
+    ```
+
+2.  **Instale as dependências**
+    ```bash
+    npm install
+    ```
+
+3.  **Inicie o projeto**
+    ```bash
+    npx expo start
+    ```
+
+4.  **Teste no celular**
+    * Abra a aplicação **Expo Go** no seu dispositivo.
+    * Leia o **QR Code** que aparece no seu terminal ou no navegador.
 
 ---
 
